@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{12501631-5C26-400D-91CD-F3BFCB786109}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Todo.DrivenAdapter.SqlServer/TodoContext.cs">
+    <Files>
+      <File FileName="TodoWebApi/Program.cs" Line="39" Column="24" />
+      <File FileName="TodoWebApi/Controllers/TodoController.cs" />
+      <File FileName="Todo.DrivenAdapter.SqlServer/Model/Enums/TodoCategory.cs" />
+      <File FileName="Todo.DrivenAdapter.SqlServer/Model/Enums/TodoStatus.cs" />
+      <File FileName="Todo.DrivenAdapter.SqlServer/Model/Todo.cs" />
+      <File FileName="Todo.DrivenAdapter.SqlServer/TodoContext.cs" Line="12" Column="21" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TodoWebApi" expanded="True">
+            <Node name="Infrastructure" expanded="True">
+              <Node name="Todo.DrivenAdapter.SqlServer" expanded="True">
+                <Node name="TodoContext.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TodoWebApi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <DisabledProjects>
+    <String>Todo.Model/Todo.Model.csproj</String>
+  </DisabledProjects>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj": {}
+  },
+  "projects": {
+    "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj",
+        "projectName": "Todo.DrivenAdapter.SqlServer",
+        "projectPath": "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj",
+        "packagesPath": "/Users/sbenitez/.nuget/packages/",
+        "outputPath": "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/sbenitez/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
