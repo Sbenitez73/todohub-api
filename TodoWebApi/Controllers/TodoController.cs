@@ -22,12 +22,8 @@
         public async Task<ActionResult<TaskDto>> GetById(int id)
         {
             var task = await _mediator.Send(new GetTaskByIdQuery(id));
-
-            if (task == null)
-            {
-                return NotFound();
-            }
-
+            if (task is null) return NotFound();
+            
             return Ok(task);
         }
 
@@ -41,18 +37,17 @@
         public async Task<ActionResult<TaskDto>> Create(CreateTaskCommand command)
         {
             var task = await _mediator.Send(command);
+            if (task is null) return BadRequest("Informacion incorrecta, por favor revisela");
+
             return CreatedAtAction(nameof(GetById), new { id = task.Id }, task);
         }
 
         [HttpPut]
         public async Task<IActionResult> Update(UpdateTaskCommand command)
         {
-            var taskItem = await _mediator.Send(command);
-            if (taskItem == null)
-            {
-                return NotFound("No se encontró la tarea");
-            }
-
+            var task = await _mediator.Send(command);
+            if (task is null) return NotFound("No se encontró la tarea");
+            
             return Ok(command.Task);
         }
 

@@ -10,20 +10,21 @@
     public class TaskRepository : ITaskRepository
     {
         private readonly TaskContext _context;
-        private readonly IMapper _mapper;
 
-        public TaskRepository(TaskContext context, IMapper mapper)
+        public TaskRepository(TaskContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         public async Task<Todo>AddTaskAsync(Todo task)
         {
+            if (task == null || task.Id > 0) return null;
+
+
             _context.Todos.Add(task);
             await _context.SaveChangesAsync();
 
-            return _mapper.Map<Todo>(task);
+            return task;
         }
 
         public async Task<bool> DeleteTaskAsync(int id)
@@ -51,6 +52,14 @@
         public async Task<Todo> UpdateTaskAsync(Todo task)
         {
             var updateTask = await _context.Todos.FirstOrDefaultAsync(t => Equals(t.Id, task.Id));
+            if (updateTask is null) return null;
+
+            updateTask.Status = task.Status;
+            updateTask.Title = task.Title;
+            updateTask.Description = task.Description;
+            updateTask.Category = task.Category;
+
+            _context.Update(updateTask);
             await _context.SaveChangesAsync();
 
             return updateTask;

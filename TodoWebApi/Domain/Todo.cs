@@ -1,9 +1,11 @@
-﻿using Todo.WebApi.Application.DTOs.Enums;
-
-namespace Todo.WebApi.Domain
+﻿namespace Todo.WebApi.Domain
 {
+    using Application.DTOs.Enums;
+    using System.ComponentModel.DataAnnotations;
+
     public class Todo
     {
+        [Key]
         public int Id { get; set; }
         public TodoStatusDto Status { get; set; }
         public TodoCategoryDto Category { get; set; }
