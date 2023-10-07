@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sbenitez/Projects/TodoWebApi/TodoWebApi/TodoWebApi.csproj": {}
+    "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\TodoWebApi\\TodoWebApi.csproj": {}
   },
   "projects": {
-    "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj": {
+    "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\Todo.DrivenAdapter.SqlServer\\Todo.DrivenAdapter.SqlServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj",
+        "projectUniqueName": "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\Todo.DrivenAdapter.SqlServer\\Todo.DrivenAdapter.SqlServer.csproj",
         "projectName": "Todo.DrivenAdapter.SqlServer",
-        "projectPath": "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj",
-        "packagesPath": "/Users/sbenitez/.nuget/packages/",
-        "outputPath": "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/obj/",
+        "projectPath": "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\Todo.DrivenAdapter.SqlServer\\Todo.DrivenAdapter.SqlServer.csproj",
+        "packagesPath": "C:\\Users\\Santi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\Todo.DrivenAdapter.SqlServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sbenitez/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,6 +43,16 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
             }
           },
           "imports": [
@@ -59,34 +71,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/sbenitez/Projects/TodoWebApi/TodoWebApi/TodoWebApi.csproj": {
+    "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\TodoWebApi\\TodoWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sbenitez/Projects/TodoWebApi/TodoWebApi/TodoWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\TodoWebApi\\TodoWebApi.csproj",
         "projectName": "TodoWebApi",
-        "projectPath": "/Users/sbenitez/Projects/TodoWebApi/TodoWebApi/TodoWebApi.csproj",
-        "packagesPath": "/Users/sbenitez/.nuget/packages/",
-        "outputPath": "/Users/sbenitez/Projects/TodoWebApi/TodoWebApi/obj/",
+        "projectPath": "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\TodoWebApi\\TodoWebApi.csproj",
+        "packagesPath": "C:\\Users\\Santi\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\TodoWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/sbenitez/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Santi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj": {
-                "projectPath": "/Users/sbenitez/Projects/TodoWebApi/Todo.DrivenAdapter.SqlServer/Todo.DrivenAdapter.SqlServer.csproj"
+              "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\Todo.DrivenAdapter.SqlServer\\Todo.DrivenAdapter.SqlServer.csproj": {
+                "projectPath": "C:\\Users\\Santi\\Source\\Repos\\todohub-api\\Todo.DrivenAdapter.SqlServer\\Todo.DrivenAdapter.SqlServer.csproj"
               }
             }
           }
@@ -121,6 +135,12 @@
               "target": "Package",
               "version": "[7.0.11, )"
             },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
             "Microsoft.Extensions.Configuration.AzureKeyVault": {
               "target": "Package",
               "version": "[3.1.24, )"
@@ -149,7 +169,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
