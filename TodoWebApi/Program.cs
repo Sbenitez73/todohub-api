@@ -9,11 +9,27 @@ using Todo.WebApi.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddControllers().AddJsonOptions(options =>
-    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter())); 
+    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
+var allowedOrigin = builder.Configuration.GetSection("AllowedOrigins").Value;
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: allowedOrigin,
+                      policy =>
+                      {
+                          policy.WithOrigins(allowedOrigin);
+                          policy.SetIsOriginAllowed(origin => Equals(new Uri(origin).Host, "localhost"))
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                      });
+});
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
@@ -44,12 +60,17 @@ builder.Services.AddDbContext<TaskContext>(options =>
 
 var app = builder.Build();
 
+
+app.UseCors(allowedOrigin);
+
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 

@@ -34,17 +34,18 @@
         }
 
         [HttpPost]
-        public async Task<ActionResult<TaskDto>> Create(CreateTaskCommand command)
+        public async Task<ActionResult<TaskDto>> Create([FromBody] TaskDto taskDto)
         {
-            var task = await _mediator.Send(command);
+            var task = await _mediator.Send(new CreateTaskCommand(taskDto));
             if (task is null) return BadRequest("Informacion incorrecta, por favor revisela");
 
             return CreatedAtAction(nameof(GetById), new { id = task.Id }, task);
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(UpdateTaskCommand command)
+        public async Task<IActionResult> Update([FromBody] TaskDto taskDto)
         {
+            var command = new UpdateTaskCommand(taskDto);
             var task = await _mediator.Send(command);
             if (task is null) return NotFound("No se encontró la tarea");
             
